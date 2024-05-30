@@ -1,0 +1,76 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<header>
+    <h1 class="title">Bien Manger Pour Mieux Vivre</h1>
+    {% if user.is_authenticated %}
+    <h2>Welcome <span>{{ user.username }}</span>!</h2>
+    {% else %}
+    <h2> Welcome Guest!</h2>
+    {% endif %}
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="{% url 'pages:about' %}">About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:recette' %}">Nos recettes</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:guide' %}"> Guide alimentaire</a>
+
+            </li>
+            <li>
+                <a href="{% url 'pages:conseil' %}">Conseil sante</a>
+
+            </li>
+            <li>
+                {% if user.is_authenticated %}
+                <a href="{% url 'accounts:profile' %}">
+                    <button>Profile</button>
+                </a>
+                {% else %}
+                <a href="{% url 'login' %}">
+                    <button>Login</button>
+                </a>
+                {% endif %}
+               
+                    
+            </li>
+        </ul>
+    </div>
+</header>
+<section class="container_full">
+    <div class="content1">
+       <div class="details">
+            <div class="left">
+                <img src="{% static 'pages/img/bg_left.jpg' %}" alt="" srcset="">
+            </div>
+            <div class="right">
+                <p>Découvrez un monde de bien-être et de vitalité grâce à notre site dédié à la nutrition. Plongez dans un univers où la santé et la nutrition se rejoignent pour vous offrir des conseils pratiques, des recettes savoureuses et des informations essentielles pour une alimentation équilibrée. Explorez les dernières tendances en matière de nutrition et laissez-vous guider vers un mode de vie sain et énergisant. Bienvenue dans votre source d'inspiration pour une alimentation consciente et une santé optimale Nutri-Santé vous accompagne dans votre démarche d'une alimentation saine et équilibrée. Retrouvez des conseils, des recettes et des astuces pour adopter un mode de vie plus sain. </p>
+            </div>
+       </div>
+    </div>
+    <div class="service">
+        <h2 class="title">Nos services</h2>
+        <ul>
+            <li>Conseils personnalisés en nutrition</li>
+            <li>Création de programmes alimentaires adaptés à vos besoins</li>
+            <li>Suivi et accompagnement réguliers</li>
+            <li>Ateliers culinaires et conférences sur la nutrition</li>
+        </ul>
+    </div>
+</section>
+<div class="footer">
+    <p class="copyright">&copy; 2024 Laetitia. Tous droits réservés.</p>
+</div>
+
+
+
+            
+    
+{% endblock %}

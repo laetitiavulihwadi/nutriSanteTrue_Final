@@ -1,0 +1,82 @@
+{% extends 'base-template.html' %}
+{% load static %}
+{% block 'content' %}
+
+<header>
+    <h1 class="title">Bien Manger Pour Mieux Vivre</h1>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="{% url 'pages:about' %}">About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:recette' %}">Nos recettes</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:guide' %}"> Guide alimentaire</a>
+
+            </li>
+            <li>
+                <a href="{% url 'pages:conseil' %}">Conseil sante</a>
+
+            </li>
+        </ul>
+    </div>
+</header>
+    
+<a href="{% url 'pages:home' %}" class="back">Back Home</a>
+
+<a href="{% url 'pages:insertRec' %}" class="insert">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+</a>
+
+
+
+    <div class="container-fullH">
+       
+        {% for rec in recettes %}
+            <a href="{% url "pages:details" rec.id %}">
+                <div class="item">
+                    {% if  rec.photo %}
+                        <img src="{{ rec.photo.url}}"alt="Image 1">    
+                    {% else%}
+                        <img src="{% static "img/img4.jpg" %}"alt="Image 1">
+                    {% endif %}
+                    <h3>{{rec.nom}}</h3>
+                    <h3>{{rec.creation_date}}</h3>
+                </div>
+            </a>
+
+        {% endfor %}
+      <!-- messages -->
+        <div class="messages_class">
+            {% if messages %}
+            <ul class="messagelist">
+                <li {% if message.tags %} class="{{message.tags}}  {% endif %}">
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                    {{ message }}
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+
+<!-- messages -->
+
+    </div>
+
+    <div class="paginator">
+        {% if recettes.has_previous %}
+            <a href="?page={{ recettes.previous_page_number }}" class="prev"> Prev </a>
+        {% endif %}
+        {% if recettes.has_next %}
+            <a href="?page={{ recettes.next_page_number }}" class="next"> Next </a>
+        {% endif %}
+
+    </div>
+
+
+
+{% endblock %}
+

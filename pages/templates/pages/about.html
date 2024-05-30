@@ -1,0 +1,76 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<header>
+    <h1 class="title">Bien Manger Pour Mieux Vivre</h1>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="{% url 'pages:about' %}">About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:recette' %}">Nos recettes</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:guide' %}"> Guide alimentaire</a>
+
+            </li>
+            <li>
+                <a href="{% url 'pages:conseil' %}">Conseil sante</a>
+
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+<div class="Table_section">
+    <div class="conseil">
+        <h2> A propos de Nous</h2>
+        <p>
+            <br> Bien Manger Pour Mieux Vivre <br>
+     
+     Bienvenue sur "Bien Manger Pour Mieux Vivre" ! Notre site web est votre destination ultime pour découvrir l'art de la gastronomie et les conseils nutritionnels qui vous permettront de mener une vie saine et équilibrée.
+     
+     Chez "Bien Manger Pour Mieux Vivre", nous croyons fermement que l'alimentation joue un rôle essentiel dans notre bien-être global. Nous sommes passionnés par la nourriture, son pouvoir de réunir les gens, de stimuler nos sens et de nourrir notre corps de manière optimale. Notre objectif est de vous guider dans un voyage culinaire enrichissant, en vous offrant une mine d'informations, d'inspiration et de ressources pour vous aider à prendre des décisions éclairées concernant votre alimentation.
+     
+     Notre équipe d'experts culinaires et nutritionnistes chevronnés est dédiée à vous fournir des conseils pratiques et des connaissances approfondies. Que vous soyez un novice en cuisine ou un passionné expérimenté, nous sommes là pour vous accompagner à chaque étape de votre parcours culinaire. Vous découvrirez des recettes alléchantes provenant des quatre coins du monde, des astuces et des techniques de cuisine, ainsi que des recommandations sur les meilleurs ingrédients à choisir pour une alimentation équilibrée.
+     
+     Au-delà de la simple préparation des repas, nous explorons également les liens entre l'alimentation et la santé. Notre rubrique dédiée aux conseils nutritionnels vous aidera à comprendre les besoins spécifiques de votre corps, à adopter de saines habitudes alimentaires et à tirer le meilleur parti des aliments que vous consommez. Nous vous fournirons des informations précieuses sur les nutriments essentiels, les régimes spécifiques, les allergies alimentaires et bien plus encore.
+     
+     "Bien Manger Pour Mieux Vivre" est également une communauté engagée, où les amateurs de gastronomie et les passionnés de nutrition peuvent se rassembler, échanger des idées et partager leurs expériences. Rejoignez notre forum de discussion pour interagir avec d'autres membres, poser des questions, partager vos recettes préférées et trouver une inspiration sans fin.
+     
+     Nous croyons que chaque repas est une occasion de se faire plaisir tout en prenant soin de soi. Avec "Bien Manger Pour Mieux Vivre", vous découvrirez comment créer des plats délicieux, nourrissants et équilibrés qui vous permettront de profiter pleinement de la vie. Préparez-vous à élargir vos horizons culinaires, à explorer de nouvelles saveurs et à embrasser un mode de vie sain et épanoui.
+     
+     Rejoignez-nous dès aujourd'hui et laissez "Bien Manger Pour Mieux Vivre" être votre guide vers une expérience culinaire exceptionnelle et une meilleure qualité de vie.
+         </p>
+
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+    <p class="copyright">&copy; 2024 Laetitia. Tous droits réservés.</p>
+</div>
+
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'pages:home' %}">About Us</a>
+
+
+</body>
+</html>

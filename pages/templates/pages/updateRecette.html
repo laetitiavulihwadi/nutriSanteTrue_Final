@@ -1,0 +1,26 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<div class="container_recette">
+    <div class="recette">
+        <h1 class="title">Modifier une Recette</h1>
+        <form  method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Valider">
+        </form>
+
+    </div>
+    
+    
+
+</div>
+
+{% comment %} action="{% url 'pages:updateRec' rec_id %}" {% endcomment %}
+            
+    
+{% endblock %}

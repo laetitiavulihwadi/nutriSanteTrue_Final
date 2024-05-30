@@ -1,0 +1,72 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<header>
+    <h1 class="title">Bien Manger Pour Mieux Vivre</h1>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="{% url 'pages:about' %}">About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:recette' %}">Nos recettes</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:guide' %}"> Guide alimentaire</a>
+
+            </li>
+            <li>
+                <a href="{% url 'pages:conseil' %}">Conseil sante</a>
+
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="container_detail">
+
+    <div class="photo">
+        {% if  rec.photo %}
+            <img src="{{ rec.photo.url}}"alt="Image 1">    
+        {% else%}
+            <img src="{% static "img/img4.jpg" %}"alt="Image 1">
+        {% endif %}
+    </div>
+    <div class="details">
+        <h2 class="nom">{{rec.nom}}</h2>
+        <h2 class="date"> {{rec.creation_date}}</h2>
+        <div class="actions">
+            {% if perms.pages.change_recette %}
+                <a href="{% url "pages:updateRec" rec.id%}">Update</a>
+            {% endif %}
+            {% if perms.pages.delete_recette %}
+                <a href="{% url "pages:del_Recette" rec.id%}">Delete</a>
+            {% endif %}
+        </div>
+        <p class="description">
+           {{rec.description}}
+        </p>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+    <p class="copyright">&copy; 2024 Laetitia. Tous droits réservés.</p>
+</div>
+
+
+
+            
+    
+{% endblock %}

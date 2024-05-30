@@ -1,0 +1,668 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+header{
+  z-index: 999;
+  background-color: rgb(5, 5, 5);
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+header .title{
+  margin-top: 1rem;
+  font-weight: bolder;
+  border: 0px solid goldenrod;
+}
+header .nav{
+  width: 100%;
+  padding: 1rem;
+}
+header h2 span{
+  color: #4CAF50;
+}
+.nav ul{
+  display: flex;
+  justify-content: space-around;
+}
+.nav ul li{
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+.nav ul li a{
+  transition:  all ease-in-out .5s;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.nav ul li a:hover{
+  text-decoration:underline;
+}
+.container_full{
+  padding-top: 8rem;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 0px;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.container_full .content1{
+  margin-top: 4rem;
+  width: 100%;
+  position: relative;
+  padding: 3rem 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 70vh;
+}
+.content1 .details{
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.288);
+  backdrop-filter: blur(5px);
+  width: 80%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:  0 4px 8px black;
+}
+.details > *{
+  height: 100%;
+  width: 50%;
+  padding: 0;
+}
+.details .left {
+  padding: 0;
+}
+.details .left > img{
+  object-fit: cover;
+  /* border-radius: 1rem; */
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 90%;
+  min-width: 30rem;
+  height: 30rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.details .right{
+  height: 100%!important;
+  margin-right: 1.5rem;
+  padding: 0;
+
+}
+.right p{
+  padding: 1rem;
+  display: block;
+  position: relative;
+  font-size: 1.3rem;
+  justify-content: center;
+  text-align: center;
+  height: 100%!important;
+}
+
+/* service */
+.service{
+  margin-top: 4em;
+  background-color: goldenrod;
+  height: auto;
+  padding: 1.5rem 7%;
+  margin-bottom: 0px;
+}
+
+.service h2{
+  margin-top: 2rem;
+  text-align: center;
+}
+.service ul{
+  width: 50%;
+}
+.service ul li{
+font-size: 1.3rem;
+list-style-type: disc;
+}
+
+/* footer */
+.footer{
+  height: 8rem;
+  margin-top: 0px;
+  background-color: rgb(5, 5, 5);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: white;
+}
+
+/* /\---------------------------------------------------------------------- */
+
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+    margin: 0 50px;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+/* ============css pour les images========*/
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    grid-gap: 20px; /* Space between items */
+  }
+  
+  .image-item {
+    background-color: #f5f5f5; /* Light background for items */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for a softer look */
+    text-align: center; /* Center text within items */
+  }
+  
+  .image-item img {
+    width: 100%; /* Images fill the width of the item */
+    height: auto; /* Maintain image aspect ratio */
+  }
+  
+  .image-item p {
+    margin-top: 5px; /* Add space between image and text */
+  }
+  
+  button {
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Indicate clickable button */
+  }
+
+/* ====== a propos=====*/
+
+.home {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    height:auto; /* Hauteur égale à 100% de la hauteur de la vue */
+   
+}
+.home p {
+    text-align:center; /* Centre le texte horizontalement */
+    max-width: 800px; /* Largeur maximale du paragraphe */
+
+}
+
+
+/*======= guide*/
+/* 
+
+body {
+   
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+  
+ 
+  
+  
+  main {
+   
+    
+    padding: 20px;
+    
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .aliments-sains ul, .aliments-a-eviter ul {
+    columns: 2;
+  }
+  
+  .conseils-pour-une-alimentation-saine ul {
+    columns: 3;
+  }
+  
+  .image-ite {
+    background-image: url("/static/pages/css/img/img1.jpg");
+  } */
+
+  /*===== home=====*/
+
+/*         Insert recette        */
+.container_recette{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recette{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 450px;
+}
+.recette .title{
+  text-align: center;
+}
+.container_recette > *{
+  display: block;
+}
+.container_recette form ul > li{
+  font-size: .8rem;
+  color: #2ECC40;
+}
+.container_recette form > p > *{
+  display: block;
+  width: 100%;
+}
+.container_recette form input, .container_recette form textarea{
+  padding: .5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.container_recette form label{
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+.container_recette form > input[type="submit"]{
+  margin-top: 1rem;
+  width: 100%;
+  color: white;
+  background: rgb(5, 5, 5);
+  padding: .5rem;
+  border-radius: 5px;
+  border: inherit;
+  cursor: pointer;
+}
+
+
+
+/* list recettes */  
+.back{
+  z-index: 999;
+  position: fixed;
+  top: 8.3rem;
+  left: 1rem;
+  color: goldenrod;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.insert{
+  height: 4rem;
+  width: 4rem;
+  color: white;
+  font-weight: bold;
+  background: #030303;
+  z-index: 999;
+  position: fixed;
+  top: 8.3rem;
+  right: 1rem;
+  color: goldenrod;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: .8rem;
+  border: 2px solid goldenrod;
+  border-radius: 50%;
+}
+.container_fullHD{
+  border: 10px solid rgb(181, 32, 218);
+  padding-top: 15rem;
+  position: relative;
+  min-height: 100vh;
+  padding: 7rem 7%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  /* grid-template-columns: repeat(5, 1fr); */
+  gap: 20px;
+}
+.container_fullHD .recette{
+  overflow-x: hidden;
+  /* overflow-y: visible; */
+  position: relative;
+  border: 2px solid rgb(181, 32, 218);
+  background: rgb(5, 5, 5);
+  min-width: 12rem;
+  transition: all ease-in .3s;
+  padding: 1rem 1%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recette > a{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.recette > a > img{
+  max-height: 16rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%!important;
+}
+.recette > a > .infos{
+  margin-top: 0;
+  background: rgb(5, 5, 5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.infos > h3{
+  display: block;
+  font-size: medium;
+  color: goldenrod;
+  font-weight: 100;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: .8rem;
+}
+.infos > .nom{
+  font-size: 1.5rem;
+}
+
+/*  recette upgraded */
+
+.container-fullH {
+  padding: 2rem 10%;
+  padding-top: 12rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.container-fullH a{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.container-fullH a .item {
+  background: rgb(5, 5, 5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fullH a .item img {
+  width: 100%;
+  height: auto;
+}
+
+.container-fullH a .item h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* ---------------------------------- */
+
+/* ============ Details Page  =========== */
+.container_detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 10%;
+  padding-top: 10rem;
+}
+.container_detail .photo{
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+}
+.photo > img{
+  object-fit: cover;
+  height: 20rem;
+  height: 20rem;
+}
+.container_detail .details{
+  display: flex;
+  flex-direction: column;
+}
+.details{
+  padding: 1rem 5%;
+}
+.details > h2{
+  width: 100%;
+  text-align: center;
+}
+.details p{
+  border: 0px solid khaki;
+  padding: 2rem 5%;
+
+}
+.details .actions{
+  width: 100%;
+  border: 0px solid forestgreen;
+  display: flex;
+  justify-content: space-around;
+}
+.details .actions > a{
+  border-radius: .5rem;
+  padding: .5rem;
+  background: goldenrod;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* ================ Table ============= */
+.Table_section{
+  border: 3px solid forestgreen;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 9%;
+  padding-top: 10rem;
+}
+.Table_section .conseil p{
+  font-size: 1.3rem;
+}
+.conseil h2{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: goldenrod;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+
+/* ------------------------ Accounts ---------------------- */
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 3%;
+  /* justify-content: center; */
+  align-items: center;
+  /* background-color: #4CAF50; */
+}
+main button,
+input[type='submit']{
+  margin-top: 1rem;
+  width: 100%;
+  min-width: 20rem;
+  padding: .8rem;
+  border-radius: .5rem;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+  background: #4CAF50;
+
+}
+main button:hover,input[type='submit']:hover{
+  background-color: aqua;
+}
+main .content {
+  border: 0px solid firebrick;
+}
+main h1 em{
+  color: #4CAF50;
+  font-size: 2rem;
+}
+main .login-item{
+  font-size: 1.2rem;
+  color: #030303;
+}
+main .login-item a{
+  color: #2ECC40;
+}
+/* ----------------- form  */
+main form{ 
+  border: 0px solid gold;
+}
+main form p{
+  display: flex;
+  flex-direction: column;
+  padding: .8rem 0;
+}
+main form p label{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main form p input{
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  color: black;
+  padding: .5rem;
+  outline: none;
+  border: 1px solid;
+}
+main form input[type="button"],
+input[type="submit"]{
+  width: 100%;
+  cursor: pointer;
+}
+main form input[type="button"]:hover{
+  background-color: aqua;
+}
+main em{
+  color: #4CAF50;
+  font-size: 1.2rem;
+}
+.profile-icon{
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  border: 2px solid #4CAF50;
+  background-image: url('icon.png');
+}
+
+
+/* PAGINATOR */
+.paginator{
+  position: absolute;
+  position: fixed;
+  display: block;
+  bottom: 0;
+  width: 100%;
+}
+.paginator > a{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: goldenrod;
+}
+.paginator .next{
+  float: right;
+  right: 1rem;
+
+}
+/* MESSAGES */
+.messages_class{
+  border: 2px solid #2ECC40;
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  padding: .5rem;
+  height: 5rem;
+  background-color: #4CAF50;
+}
+.messages_class ul li{
+  color: red;
+  font-size: 2rem;
+}

@@ -1,0 +1,66 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<header>
+    <h1 class="title">Bien Manger Pour Mieux Vivre</h1>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="{% url 'pages:about' %}">About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:recette' %}">Nos recettes</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:guide' %}"> Guide alimentaire</a>
+
+            </li>
+            <li>
+                <a href="{% url 'pages:conseil' %}">Conseil sante</a>
+
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+<div class="Table_section">
+    <div class="conseil">
+        <h2> Conseil pour une alimentation saine et équilibrée</h2>
+        <p>
+            Une alimentation équilibrée et variée est essentielle pour une bonne nutrition. Voici quelques points supplémentaires à considérer :
+
+                Fruits et légumes : Ils sont riches en vitamines, minéraux, fibres et antioxydants. Essayez d'inclure une variété de fruits et légumes colorés dans votre alimentation quotidienne pour bénéficier de leurs bienfaits nutritionnels.
+
+                Céréales complètes : Optez pour des céréales complètes telles que le riz brun, le pain complet, les pâtes complètes, l'avoine, etc. Elles sont riches en fibres, en vitamines B et en minéraux.
+
+                Protéines maigres : Les sources de protéines maigres comprennent les viandes maigres (comme le poulet et la dinde sans peau), les poissons, les fruits de mer, les légumineuses (comme les haricots, les lentilles et les pois chiches), le tofu et les produits laitiers faibles en gras ou sans gras. Les protéines sont essentielles pour la croissance, la réparation des tissus et le bon fonctionnement du corps.
+
+                Produits laitiers faibles en gras ou sans gras : Les produits laitiers sont une bonne source de calcium, de vitamine D et de protéines. Choisissez des options faibles en gras ou sans gras pour réduire votre consommation de graisses saturées.
+
+                Graisses saines : Les graisses saines, telles que celles présentes dans les noix, les graines, les avocats et les huiles végétales (comme l'huile d'olive et l'huile de colza), sont importantes pour une bonne nutrition. Elles fournissent des acides gras essentiels et des vitamines liposolubles. Cependant, il est important de les consommer avec modération, car ils sont riches en calories.
+
+                Éviter les aliments transformés : Les aliments transformés, tels que les boissons sucrées, les collations sucrées et salées, les aliments frits et les plats préparés, sont souvent riches en sucres ajoutés, en gras saturés, en gras trans et en sodium. Essayez de limiter votre consommation de ces aliments et privilégiez des options plus naturelles et non transformées.
+
+                Hydratation : L'eau est essentielle pour maintenir un bon équilibre hydrique dans le corps. Buvez suffisamment d'eau tout au long de la journée pour rester hydraté. Évitez les boissons sucrées et les sodas, car ils peuvent être riches en calories vides.
+
+                Activité physique : Complétez une alimentation saine par une activité physique régulière. L'exercice aide à maintenir un poids santé, à renforcer les muscles et les os, à améliorer la digestion et à favoriser le bien-être général.
+
+
+        </p>
+
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+    <p class="copyright">&copy; 2024 Laetitia. Tous droits réservés.</p>
+</div>
+
+{% endblock %}

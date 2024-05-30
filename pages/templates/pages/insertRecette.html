@@ -1,0 +1,29 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<div class="container_recette">
+    <div class="recette_">
+        <h1 class="title">Créer une Recette</h1>
+        <form action="{% url 'pages:insertRec' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}

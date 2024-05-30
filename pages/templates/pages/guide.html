@@ -1,0 +1,92 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<header>
+    <h1 class="title">Bien Manger Pour Mieux Vivre</h1>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="{% url 'pages:about' %}">About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:recette' %}">Nos recettes</a>
+            </li>
+            <li>
+                <a href="{% url 'pages:guide' %}"> Guide alimentaire</a>
+
+            </li>
+            <li>
+                <a href="{% url 'pages:conseil' %}">Conseil sante</a>
+
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+<div class="Table_section">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Categorie</th>
+        <th>Contenu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Aliments sains</td>
+        <td>
+          <ul>
+            <li>Fruits et légumes</li>
+            <li>Céréales complètes</li>
+            <li>Légumineuses</li>
+            <li>Noix et graines</li>
+            <li>Poissons gras</li>
+            <li>Produits laitiers faibles en gras ou sans gras</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Aliments à éviter</td>
+        <td>
+          <ul>
+            <li>Aliments transformés</li>
+            <li>Aliments riches en sucres ajoutés</li>
+            <li>Aliments riches en gras saturés et trans</li>
+            <li>Boissons sucrées</li>
+            <li>Alcool</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Conseils pour une alimentation saine</td>
+        <td>
+          <ul>
+            <li>Mangez beaucoup de fruits et légumes.</li>
+            <li>Choisissez des céréales complètes plutôt que des céréales raffinées.</li>
+            <li>Limitez votre consommation de graisses saturées et trans.</li>
+            <li>Choisissez des sources de protéines maigres.</li>
+            <li>Limitez votre consommation de sucres ajoutés.</li>
+            <li>Buvez beaucoup d'eau.</li>
+            <li>Faites de l'exercice régulièrement.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+
+<div class="footer">
+    <p class="copyright">&copy; 2024 Laetitia. Tous droits réservés.</p>
+</div>
+
+{% endblock %}

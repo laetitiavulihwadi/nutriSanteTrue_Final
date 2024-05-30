@@ -1,0 +1,32 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+{% block 'content' %}
+
+
+<div class="container_recette">
+    <div class="recette">
+        <h1 class="title">Voulez-vous vraiment supprimer cette recette? [{{recette.nom}}]</h1>
+        <form  method="post" action="{% url 'pages:del_Recette' recette.id %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Confirmer">
+        </form>
+
+        <a href="{% url "pages:details" recette.id %}">
+            <button class="cancel-button">
+                Annuler
+            </button>    
+        </a>
+
+    </div>
+    
+    
+
+</div>
+
+{% comment %} action="{% url 'pages:updateRec' rec_id %}" {% endcomment %}
+            
+    
+{% endblock %}
